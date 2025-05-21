@@ -2,17 +2,20 @@
 
 function fizzBuzz() {
     let input = document.getElementById("fizzBuzzInput").value;
+    let results = "";
     let z = 1;
     while (z <= input) {
         if(z % 15 === 0){
-            console.log("FizzBuzz")
+            results += " FizzBuzz"
         } else if (z % 3 === 0 ) {
-            console.log("Fizz")
+            results += " Fizz"
         } else if ( z % 5 === 0 ) {
-            console.log("Buzz")
+            results += " Buzz"
         } else {
-            console.log(z)
+            results += " " + z;
         }
         z++
     }
+    document.getElementById("result").innerHTML = results;
+    document.getElementById("inputForm").reset();
 }
